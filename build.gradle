@@ -1,7 +1,7 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 ext {
-    //项目版本
+    // Project Version
     configuration = [
             package              : "com.lrony.mvpframe",
             buildToolsVersion    : "27.0.1",
@@ -12,7 +12,7 @@ ext {
             version_name         : "v1.0.0",
     ]
 
-    //对一些库的版本进行统一管理
+    // Lib Version Manage
     libraries = [
             supportVersion      : "27.0.1",
     ]

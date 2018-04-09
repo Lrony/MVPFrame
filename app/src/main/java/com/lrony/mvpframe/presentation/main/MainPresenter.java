@@ -1,0 +1,28 @@
+package com.lrony.mvpframe.presentation.main;
+
+import android.os.Handler;
+
+import com.lrony.mvpframe.mvp.MvpBasePresenter;
+
+/**
+ * Created by lrony on 2018/4/9.
+ */
+public class MainPresenter extends MvpBasePresenter<MainContract.View> implements MainContract.Presenter {
+
+    @Override
+    public void start() {
+        super.start();
+        // You can check software updates here
+    }
+
+    @Override
+    public void getData() {
+        // Analog network request data
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                getView().showData("Hello MVPFrame");
+            }
+        }, 2000);
+    }
+}
