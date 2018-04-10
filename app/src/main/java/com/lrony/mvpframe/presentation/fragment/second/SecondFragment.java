@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import com.lrony.mvpframe.R;
@@ -19,6 +20,7 @@ import java.util.List;
  */
 public class SecondFragment extends MvpFragment<SecondContract.Presenter> implements SecondContract.View, SwipeRefreshLayout.OnRefreshListener {
 
+    private Toolbar mToolbar;
     private SwipeRefreshLayout mRefreshView;
     private RecyclerView mRecyclerView;
 
@@ -52,10 +54,13 @@ public class SecondFragment extends MvpFragment<SecondContract.Presenter> implem
 
         initView(view);
 
-        getPresenter().getDatas();
+        // getPresenter().getDatas();
     }
 
     private void initView(View view) {
+        mToolbar = view.findViewById(R.id.toolbar);
+        mToolbar.setTitle(R.string.fragment_second);
+
         mRefreshView = view.findViewById(R.id.refresh);
         mRecyclerView = view.findViewById(R.id.recycler);
 

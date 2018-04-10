@@ -3,6 +3,7 @@ package com.lrony.mvpframe.presentation.fragment.first;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 
@@ -15,6 +16,7 @@ import com.lrony.mvpframe.presentation.fragment.second.SecondFragment;
  */
 public class FirstFragment extends MvpFragment<FirstContract.Presenter> implements FirstContract.View, View.OnClickListener {
 
+    private Toolbar mToolbar;
     private Button mBtnGetData;
 
     public static FirstFragment newInstance() {
@@ -41,6 +43,12 @@ public class FirstFragment extends MvpFragment<FirstContract.Presenter> implemen
         // Must use
         getPresenter().start();
 
+        initView(view);
+    }
+
+    private void initView(View view) {
+        mToolbar = view.findViewById(R.id.toolbar);
+        mToolbar.setTitle(R.string.fragment_first);
         mBtnGetData = view.findViewById(R.id.btn_get_data);
         bindOnClickLister(this, mBtnGetData);
     }

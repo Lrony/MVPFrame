@@ -3,7 +3,6 @@ package com.lrony.mvpframe.presentation.fragment;
 import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -13,6 +12,7 @@ import com.lrony.mvpframe.R;
 import com.lrony.mvpframe.mvp.MvpActivity;
 import com.lrony.mvpframe.presentation.fragment.first.FirstFragment;
 import com.lrony.mvpframe.presentation.fragment.second.SecondFragment;
+import com.lrony.mvpframe.presentation.fragment.third.ThirdFragment;
 
 import me.yokeyword.fragmentation.SupportFragment;
 
@@ -60,20 +60,24 @@ public class FragmentActivity extends MvpActivity<FragmentContract.Presenter> im
         if (firstFragment == null) {
             mFragments[FIRST] = FirstFragment.newInstance();
             mFragments[SECOND] = SecondFragment.newInstance();
+            mFragments[THIRD] = ThirdFragment.newInstance();
 
             loadMultipleRootFragment(R.id.framen_root, FIRST,
                     mFragments[FIRST],
-                    mFragments[SECOND]);
+                    mFragments[SECOND],
+                    mFragments[THIRD]);
         } else {
             mFragments[FIRST] = firstFragment;
             mFragments[SECOND] = findFragment(SecondFragment.class);
+            mFragments[THIRD] = findFragment(ThirdFragment.class);
         }
     }
 
     private void initView() {
         mBottomNavigationBar = findViewById(R.id.bottom_navigation_bar);
-        mBottomNavigationBar.addItem(new BottomNavigationItem(R.drawable.ic_brightness_4_black_24dp, R.string.fragment_one))
-                .addItem(new BottomNavigationItem(R.drawable.ic_brightness_5_black_24dp, R.string.fragment_two))
+        mBottomNavigationBar.addItem(new BottomNavigationItem(R.drawable.ic_brightness_4_black_24dp, R.string.fragment_first))
+                .addItem(new BottomNavigationItem(R.drawable.ic_brightness_5_black_24dp, R.string.fragment_second))
+                .addItem(new BottomNavigationItem(R.drawable.ic_brightness_6_black_24dp, R.string.fragment_third))
                 .initialise();
         mBottomNavigationBar.setTabSelectedListener(this);
     }
@@ -94,6 +98,10 @@ public class FragmentActivity extends MvpActivity<FragmentContract.Presenter> im
             case SECOND:
                 showHideFragment(mFragments[SECOND], mFragments[mCurrentFrm]);
                 mCurrentFrm = SECOND;
+                break;
+            case THIRD:
+                showHideFragment(mFragments[THIRD], mFragments[mCurrentFrm]);
+                mCurrentFrm = THIRD;
                 break;
         }
     }

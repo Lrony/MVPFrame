@@ -3,6 +3,7 @@ package com.lrony.mvpframe.presentation.main;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 
@@ -14,6 +15,7 @@ public class MainActivity extends MvpActivity<MainContract.Presenter> implements
 
     private static final String TAG = "MainActivity";
 
+    private Toolbar mToolbar;
     private Button mBtnGetData;
     private Button mBtnFragment;
 
@@ -21,8 +23,11 @@ public class MainActivity extends MvpActivity<MainContract.Presenter> implements
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mToolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(mToolbar);
 
         initView();
+
         // Must use
         getPresenter().start();
     }

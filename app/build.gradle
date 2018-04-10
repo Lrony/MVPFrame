@@ -36,6 +36,7 @@ dependencies {
     // support
     implementation 'com.android.support:appcompat-v7:' + libs.supportVersion
     implementation 'com.android.support:recyclerview-v7:' + libs.supportVersion
+    implementation 'com.android.support:design:' + libs.supportVersion
 
     // fragment manage
     implementation 'me.yokeyword:fragmentation:1.3.3'
