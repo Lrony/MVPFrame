@@ -29,8 +29,10 @@ public class App extends Application {
     public void onCreate() {
         super.onCreate();
 
+        // https://github.com/YoKeyword/Fragmentation
+        // Fragmentation is recommended to initialize in the Application
         Fragmentation.builder()
-                // 设置 栈视图 模式为 （默认）悬浮球模式   SHAKE: 摇一摇唤出  NONE：隐藏， 仅在Debug环境生效
+                // show stack view. Mode: BUBBLE, SHAKE, NONE
                 .stackViewMode(Fragmentation.BUBBLE)
                 .debug(true) // 实际场景建议.debug(BuildConfig.DEBUG)
                 /**
