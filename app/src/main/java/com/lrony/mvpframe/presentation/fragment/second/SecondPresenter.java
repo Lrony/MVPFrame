@@ -1,7 +1,12 @@
 package com.lrony.mvpframe.presentation.fragment.second;
 
+import android.os.Handler;
+
 import com.lrony.mvpframe.mvp.MvpBasePresenter;
 import com.lrony.mvpframe.presentation.fragment.first.FirstContract;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Lrony on 18-4-10.
@@ -14,5 +19,21 @@ public class SecondPresenter extends MvpBasePresenter<SecondContract.View> imple
     public void start() {
         super.start();
         // You can init action here
+    }
+
+    @Override
+    public void getDatas() {
+        getView().setRefresh(true);
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                List<String> datas = new ArrayList<>();
+                for (int i = 0; i < 15; i++) {
+                    datas.add("" + i);
+                }
+                getView().showDatas(datas);
+                getView().setRefresh(false);
+            }
+        }, 2000);
     }
 }

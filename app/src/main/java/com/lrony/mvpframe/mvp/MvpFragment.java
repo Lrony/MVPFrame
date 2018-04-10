@@ -36,9 +36,9 @@ public abstract class MvpFragment<P extends MvpPresenter> extends BaseFragment i
     public abstract P createPresenter();
 
     /**
-     * 子类通过调用该方法，获得绑定的presenter
+     * Subclass can get the bound presenter by calling this method.
      *
-     * @return 绑定的presenter
+     * @return Bound presenter
      */
     protected P getPresenter() {
         if (mPresenter == null) {

@@ -38,6 +38,7 @@ public class FirstFragment extends MvpFragment<FirstContract.Presenter> implemen
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        // Must use
         getPresenter().start();
 
         mBtnGetData = view.findViewById(R.id.btn_get_data);

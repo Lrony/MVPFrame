@@ -25,7 +25,7 @@ public class FragmentActivity extends MvpActivity<FragmentContract.Presenter> im
     public static final int SECOND = 1;
     public static final int THIRD = 2;
 
-    private SupportFragment[] mFragments = new SupportFragment[2];
+    private SupportFragment[] mFragments = new SupportFragment[3];
 
     private BottomNavigationBar mBottomNavigationBar;
 
