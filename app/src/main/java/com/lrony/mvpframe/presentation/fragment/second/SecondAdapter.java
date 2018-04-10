@@ -27,7 +27,7 @@ public class SecondAdapter extends RecyclerView.Adapter<SecondAdapter.ViewHolder
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View root = LayoutInflater.from(context).inflate(R.layout.item_second, parent, false);
+        View root = LayoutInflater.from(context).inflate(R.layout.item_list, parent, false);
         return new ViewHolder(root);
     }
 

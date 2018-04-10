@@ -7,6 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.lrony.mvpframe.util.ToastUtil;
+
 /**
  * Created by lrony on 2018/4/9.
  * Providing functionality for all fragment
@@ -22,6 +24,14 @@ public abstract class BaseFragment extends BaseSuperFragment {
     }
 
     public abstract int getLayoutId();
+
+    public void showToast(String msg) {
+        ToastUtil.showToast(msg);
+    }
+
+    public void showToast(int id) {
+        ToastUtil.showToast(id);
+    }
 
     public void bindOnClickLister(View rootView, View.OnClickListener listener, @IdRes int... ids) {
         for (int id : ids) {
