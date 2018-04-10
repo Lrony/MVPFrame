@@ -10,6 +10,8 @@ public interface MainContract {
 
     interface View extends MvpView {
 
+        void setBtnGetDataEnabled(boolean enabled);
+
         void showData(String data);
     }
 

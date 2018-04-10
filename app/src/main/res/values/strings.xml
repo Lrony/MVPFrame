@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MVPFrame</string>
+
+    <string name="test_get_data">GetData</string>
 </resources>

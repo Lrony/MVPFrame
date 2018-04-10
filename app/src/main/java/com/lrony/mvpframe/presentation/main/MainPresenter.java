@@ -17,11 +17,15 @@ public class MainPresenter extends MvpBasePresenter<MainContract.View> implement
 
     @Override
     public void getData() {
+        // set button status
+        getView().setBtnGetDataEnabled(false);
+
         // Analog network request data
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 getView().showData("Hello MVPFrame");
+                getView().setBtnGetDataEnabled(true);
             }
         }, 2000);
     }
