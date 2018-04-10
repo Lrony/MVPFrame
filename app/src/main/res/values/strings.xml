@@ -2,4 +2,8 @@
     <string name="app_name">MVPFrame</string>
 
     <string name="test_get_data">GetData</string>
+    <string name="test_fragment">Fragment Demo</string>
+
+    <string name="fragment_one">One</string>
+    <string name="fragment_two">Two</string>
 </resources>

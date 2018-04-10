@@ -15,6 +15,7 @@ ext {
     // Lib Version Manage
     libraries = [
             supportVersion      : "27.0.1",
+            navigationBarVersion: "2.0.4",
     ]
 
 }

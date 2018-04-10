@@ -15,13 +15,13 @@ public class BaseSuperActivity extends SupportActivity {
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
-        //Statsu recovery
+        // Statsu recovery
     }
 
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        //Status save
+        // Status save
     }
 }

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".presentation.main.MainActivity">
 
     <Button
@@ -11,5 +12,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/test_get_data"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/test_fragment"
         android:textAllCaps="false" />
 </LinearLayout>

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.lrony.mvpframe.AppRouter;
 import com.lrony.mvpframe.R;
 import com.lrony.mvpframe.mvp.MvpActivity;
 
@@ -14,6 +15,7 @@ public class MainActivity extends MvpActivity<MainContract.Presenter> implements
     private static final String TAG = "MainActivity";
 
     private Button mBtnGetData;
+    private Button mBtnFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +29,8 @@ public class MainActivity extends MvpActivity<MainContract.Presenter> implements
 
     private void initView() {
         mBtnGetData = findViewById(R.id.btn_get_data);
-        bindOnClickLister(this, mBtnGetData);
+        mBtnFragment = findViewById(R.id.btn_fragment);
+        bindOnClickLister(this, mBtnGetData, mBtnFragment);
     }
 
     @NonNull
@@ -51,6 +54,9 @@ public class MainActivity extends MvpActivity<MainContract.Presenter> implements
         switch (v.getId()) {
             case R.id.btn_get_data:
                 getPresenter().getData();
+                break;
+            case R.id.btn_fragment:
+                AppRouter.showFragmentActivity(this, "Hello MVPFrame Fragment");
                 break;
         }
     }
