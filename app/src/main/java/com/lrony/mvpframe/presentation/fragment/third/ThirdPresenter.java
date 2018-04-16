@@ -28,6 +28,8 @@ public class ThirdPresenter extends MvpBasePresenter<ThirdContract.View> impleme
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
+                if (!isViewAttached()) return;
+
                 // mData.size()
                 int valueCount = 9;
 

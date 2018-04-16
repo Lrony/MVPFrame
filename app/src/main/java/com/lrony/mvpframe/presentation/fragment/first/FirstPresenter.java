@@ -27,6 +27,8 @@ public class FirstPresenter extends MvpBasePresenter<FirstContract.View> impleme
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
+                if (!isViewAttached()) return;
+
                 getView().showData("Hello MVPFrame FirstFragment");
                 getView().setBtnGetDataEnabled(true);
             }

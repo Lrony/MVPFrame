@@ -1,6 +1,7 @@
 package com.lrony.mvpframe.presentation.main;
 
 import android.os.Handler;
+import android.util.Log;
 
 import com.lrony.mvpframe.mvp.MvpBasePresenter;
 
@@ -24,6 +25,8 @@ public class MainPresenter extends MvpBasePresenter<MainContract.View> implement
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
+                if (!isViewAttached()) return;
+
                 getView().showData("Hello MVPFrame");
                 getView().setBtnGetDataEnabled(true);
             }

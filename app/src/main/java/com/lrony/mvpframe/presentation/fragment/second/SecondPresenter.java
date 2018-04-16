@@ -27,6 +27,8 @@ public class SecondPresenter extends MvpBasePresenter<SecondContract.View> imple
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
+                if (!isViewAttached()) return;
+
                 List<String> datas = new ArrayList<>();
                 for (int i = 0; i < 15; i++) {
                     datas.add("" + i);

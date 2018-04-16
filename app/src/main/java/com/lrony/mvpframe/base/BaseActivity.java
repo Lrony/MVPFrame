@@ -13,11 +13,6 @@ public class BaseActivity extends BaseSuperActivity {
 
     private static final String TAG = "BaseActivity";
 
-    @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
-
     public void bindOnClickLister(View rootView, View.OnClickListener listener, @IdRes int... ids) {
         for (int id : ids) {
             View view = rootView.findViewById(id);

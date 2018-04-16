@@ -1,6 +1,7 @@
 package com.lrony.mvpframe.base;
 
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 
 import me.yokeyword.fragmentation.SupportActivity;
 
@@ -23,5 +24,15 @@ public class BaseSuperActivity extends SupportActivity {
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         // Status save
+    }
+
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
     }
 }
