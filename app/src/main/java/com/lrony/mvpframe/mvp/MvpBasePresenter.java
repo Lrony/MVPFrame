@@ -14,6 +14,8 @@ public class MvpBasePresenter<V extends MvpView> implements MvpPresenter<V> {
 
     /**
      * A connection between Presenter and View
+     *
+     * Presenter与View建立连接
      */
     @UiThread
     @Override
@@ -36,6 +38,9 @@ public class MvpBasePresenter<V extends MvpView> implements MvpPresenter<V> {
     /**
      * Each time the business request is invoked, is getView ().ShowXxx ().
      * Please first call the method to check whether to establish connection with View, or no null pointer exception.
+     *
+     * 每次调用业务请求的时候 即：getView().showXxx();时
+     * 请先调用方法检查是否与View建立连接，没有则可能会空指针异常
      */
     @UiThread
     public final boolean isViewAttached() {
@@ -44,6 +49,8 @@ public class MvpBasePresenter<V extends MvpView> implements MvpPresenter<V> {
 
     /**
      * Presenter and View connection disconnect
+     *
+     * Presenter与View连接断开
      */
     @UiThread
     @Override

@@ -49,11 +49,19 @@ public class SecondFragment extends MvpFragment<SecondContract.Presenter> implem
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        // Must use
+        /**
+         * Must use
+         * 编码规范，必须使用
+         */
         getPresenter().start();
 
         initView(view);
 
+        /**
+         * If you want load data on init
+         *
+         * 如果你想在初始化的时候加载数据
+         */
         // getPresenter().getDatas();
     }
 

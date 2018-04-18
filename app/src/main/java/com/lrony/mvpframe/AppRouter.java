@@ -7,6 +7,7 @@ import com.lrony.mvpframe.presentation.fragment.FragmentActivity;
 /**
  * Created by Lrony on 18-4-10.
  * App Router
+ * APP路由，Activity跳转等操作在这包装好方法
  */
 public class AppRouter {
 

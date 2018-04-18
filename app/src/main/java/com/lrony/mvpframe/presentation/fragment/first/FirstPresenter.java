@@ -15,15 +15,27 @@ public class FirstPresenter extends MvpBasePresenter<FirstContract.View> impleme
     @Override
     public void start() {
         super.start();
-        // You can init action here
+        /**
+         * You can init action here
+         *
+         * 你可以在这里进行一些初始操作
+         */
     }
 
     @Override
     public void getData() {
-        // set button status
+        /**
+         * set button status
+         *
+         * 设置UI按钮的状态
+         */
         getView().setBtnGetDataEnabled(false);
 
-        // Analog network request data
+        /**
+         * Analog network request data
+         *
+         * 模拟网络请求数据
+         */
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {

@@ -28,7 +28,10 @@ public class MainActivity extends MvpActivity<MainContract.Presenter> implements
 
         initView();
 
-        // Must use
+        /**
+         * Must use
+         * 编码规范，必须使用
+         */
         getPresenter().start();
     }
 

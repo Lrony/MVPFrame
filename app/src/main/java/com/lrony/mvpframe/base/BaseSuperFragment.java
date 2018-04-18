@@ -9,6 +9,8 @@ import me.yokeyword.fragmentation.SupportFragment;
 /**
  * Created by Lrony on 18-4-10.
  * Manage all Fragment lifecycle, such as statistics and recovery.
+ *
+ * 管理所有Fragment生命周期，如：统计、恢复
  */
 public class BaseSuperFragment extends SupportFragment {
 

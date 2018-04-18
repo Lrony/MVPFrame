@@ -18,7 +18,11 @@ public class SecondPresenter extends MvpBasePresenter<SecondContract.View> imple
     @Override
     public void start() {
         super.start();
-        // You can init action here
+        /**
+         * You can init action here
+         *
+         * 你可以在这里进行一些初始操作
+         */
     }
 
     @Override

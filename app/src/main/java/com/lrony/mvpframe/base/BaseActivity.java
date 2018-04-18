@@ -8,6 +8,8 @@ import android.view.View;
 /**
  * Created by lrony on 2018/4/9.
  * Providing functionality for all activity
+ *
+ * 为所有的activity封装功能
  */
 public class BaseActivity extends BaseSuperActivity {
 

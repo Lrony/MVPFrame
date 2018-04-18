@@ -12,6 +12,10 @@ public class FragmentPresenter extends MvpBasePresenter<FragmentContract.View> i
     @Override
     public void start() {
         super.start();
-        // You can init action here
+        /**
+         * You can init action here
+         *
+         * 你可以在这里进行一些初始操作
+         */
     }
 }

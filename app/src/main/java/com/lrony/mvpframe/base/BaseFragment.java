@@ -12,6 +12,8 @@ import com.lrony.mvpframe.util.ToastUtil;
 /**
  * Created by lrony on 2018/4/9.
  * Providing functionality for all fragment
+ *
+ * 为所有的fragment封装功能
  */
 public abstract class BaseFragment extends BaseSuperFragment {
 

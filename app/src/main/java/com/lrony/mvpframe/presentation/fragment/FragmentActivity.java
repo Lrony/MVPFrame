@@ -31,7 +31,11 @@ public class FragmentActivity extends MvpActivity<FragmentContract.Presenter> im
 
     private String mData;
 
-    // Current fragment
+    /**
+     * Current fragment
+     *
+     * 当前的fragment
+     */
     private int mCurrentFrm = FIRST;
 
     public static Intent newIntent(Context context, String data) {
@@ -55,7 +59,11 @@ public class FragmentActivity extends MvpActivity<FragmentContract.Presenter> im
 
         initView();
 
-        // Fragment init
+        /**
+         * Fragment init
+         *
+         * Fragment初始化
+         */
         SupportFragment firstFragment = findFragment(FirstFragment.class);
         if (firstFragment == null) {
             mFragments[FIRST] = FirstFragment.newInstance();

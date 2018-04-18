@@ -40,7 +40,10 @@ public class FirstFragment extends MvpFragment<FirstContract.Presenter> implemen
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        // Must use
+        /**
+         * Must use
+         * 编码规范，必须使用
+         */
         getPresenter().start();
 
         initView(view);
