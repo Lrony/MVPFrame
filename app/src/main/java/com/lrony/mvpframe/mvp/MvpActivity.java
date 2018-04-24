@@ -19,6 +19,11 @@ public abstract class MvpActivity<P extends MvpPresenter> extends BaseActivity i
     }
 
     @Override
+    public void showToast(int id) {
+        ToastUtil.showToast(id);
+    }
+
+    @Override
     public Context provideContext() {
         return this;
     }

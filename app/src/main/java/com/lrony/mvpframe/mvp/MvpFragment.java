@@ -19,6 +19,12 @@ public abstract class MvpFragment<P extends MvpPresenter> extends BaseFragment i
     }
 
     @Override
+    public void showToast(int id) {
+        super.showToast(id);
+        ToastUtil.showToast(id);
+    }
+
+    @Override
     public Context provideContext() {
         return this.getContext();
     }
