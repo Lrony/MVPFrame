@@ -13,4 +13,14 @@ public interface MvpView {
     void showToast(@StringRes int id);
 
     Context provideContext();
+
+    void loading();
+
+    void succeed();
+
+    void error();
+
+    void empty();
+
+    void complete();
 }

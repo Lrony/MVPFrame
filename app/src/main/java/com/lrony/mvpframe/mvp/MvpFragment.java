@@ -30,6 +30,31 @@ public abstract class MvpFragment<P extends MvpPresenter> extends BaseFragment i
     }
 
     @Override
+    public void loading() {
+
+    }
+
+    @Override
+    public void succeed() {
+
+    }
+
+    @Override
+    public void error() {
+
+    }
+
+    @Override
+    public void empty() {
+
+    }
+
+    @Override
+    public void complete() {
+
+    }
+
+    @Override
     public void onDestroyView() {
         super.onDestroyView();
         if (mPresenter != null) {
