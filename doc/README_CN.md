@@ -12,6 +12,9 @@
 
 温馨提示：建议先了解下MVP再来食用本Demo更佳！
 
+# 示例项目
+[MRead](https://github.com/Lrony/MRead) --基于MVPFrame
+
 # 目录介绍
 
 - `--base` Activity & Fragment Base类
