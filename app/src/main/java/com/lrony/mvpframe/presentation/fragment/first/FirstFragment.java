@@ -49,6 +49,18 @@ public class FirstFragment extends MvpFragment<FirstContract.Presenter> implemen
         initView(view);
     }
 
+    @Override
+    public void onSupportVisible() {
+        super.onSupportVisible();
+        // TODO: 18-5-8  
+    }
+
+    @Override
+    public void onSupportInvisible() {
+        super.onSupportInvisible();
+        // TODO: 18-5-8
+    }
+
     private void initView(View view) {
         mToolbar = view.findViewById(R.id.toolbar);
         mToolbar.setTitle(R.string.fragment_first);

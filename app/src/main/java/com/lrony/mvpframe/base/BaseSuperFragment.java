@@ -25,4 +25,14 @@ public class BaseSuperFragment extends SupportFragment {
         super.onSaveInstanceState(outState);
         // Status save
     }
+
+    @Override
+    public void onSupportVisible() {
+        super.onSupportVisible();
+    }
+
+    @Override
+    public void onSupportInvisible() {
+        super.onSupportInvisible();
+    }
 }
