@@ -29,6 +29,8 @@ public class App extends Application {
     public void onCreate() {
         super.onCreate();
 
+        AppManager.init(this);
+
         // https://github.com/YoKeyword/Fragmentation
         // Fragmentation is recommended to initialize in the Application
         Fragmentation.builder()
