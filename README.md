@@ -9,7 +9,7 @@
 Android MVPFrame Simple Demo.
 
 # Example project
-[MRead](https://github.com/Lrony/MRead) --Base from MVPFrame
+[IRead](https://github.com/Lrony/IRead) --Base from MVPFrame
 
 # Directory
 
