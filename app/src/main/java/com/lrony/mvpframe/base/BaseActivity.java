@@ -1,14 +1,12 @@
 package com.lrony.mvpframe.base;
 
-import android.os.Bundle;
 import android.support.annotation.IdRes;
-import android.support.annotation.Nullable;
 import android.view.View;
 
 /**
  * Created by lrony on 2018/4/9.
  * Providing functionality for all activity
- *
+ * <p>
  * 为所有的activity封装功能
  */
 public class BaseActivity extends BaseSuperActivity {
